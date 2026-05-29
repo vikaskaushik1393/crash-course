@@ -23,8 +23,8 @@ resource "azurerm_virtual_network" "eaausvnet" {
     resource_group_name = azurerm_resource_group.eaaus["sa1"].name
   location            = azurerm_resource_group.eaaus["sa1"].location
 }
-resource "azurerm_subnet" "eaaussubnet" {
-  name                 = "eaaussubnet"
+#resource "azurerm_subnet" "eaaussubnet" {
+ # name                 = "eaaussubnet"
   resource_group_name  = azurerm_resource_group.eaaus["sa1"].name
   virtual_network_name = azurerm_virtual_network.eaausvnet.name
   address_prefixes     = ["10.0.1.0/24"]
